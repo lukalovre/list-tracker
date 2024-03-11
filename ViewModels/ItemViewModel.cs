@@ -57,18 +57,6 @@ where TEventItem : IExternalItem
         set => this.RaiseAndSetIfChanged(ref _addAmountString, value);
     }
 
-    public static ObservableCollection<string> MusicPlatformTypes =>
-        new(
-            Enum.GetValues(typeof(eGamePlatformTypes))
-                .Cast<eGamePlatformTypes>()
-                .Select(v => v.ToString())
-        );
-
-    public static ObservableCollection<PersonComboBoxItem> PeopleList =>
-        new(PeopleManager.Instance.GetComboboxList());
-
-    public PersonComboBoxItem SelectedPerson { get; set; }
-
     public ObservableCollection<TGridItem> GridItems { get; set; }
     public ObservableCollection<TGridItem> GridItemsBookmarked { get; set; }
 
@@ -207,7 +195,6 @@ where TEventItem : IExternalItem
     {
         NewItem = (TItem)Activator.CreateInstance(typeof(TItem));
         NewImage = default;
-        SelectedPerson = default;
     }
 
     private List<TGridItem> LoadData()

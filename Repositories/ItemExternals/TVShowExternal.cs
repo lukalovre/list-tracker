@@ -7,12 +7,10 @@ namespace AvaloniaApplication1.Repositories;
 public class TVShowExternal : IExternal<TVShow>
 {
     private readonly Imdb _imdb;
-    private readonly YouTube _youtube;
 
     public TVShowExternal()
     {
         _imdb = new Imdb();
-        _youtube = new YouTube();
     }
 
     public async Task<TVShow> GetItem(string url)
@@ -22,11 +20,6 @@ public class TVShowExternal : IExternal<TVShow>
         if (url.Contains(Imdb.UrlIdentifier))
         {
             return await _imdb.GetItem(url);
-        }
-
-        if (url.Contains(YouTube.UrlIdentifier))
-        {
-            return await _youtube.GetItem(url);
         }
 
         return new TVShow();

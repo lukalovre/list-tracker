@@ -4,7 +4,7 @@ using Repositories;
 namespace AvaloniaApplication1.ViewModels;
 
 public partial class TVShowsViewModel(IDatasource datasource, IExternal<TVShow> external)
-: ItemViewModel<TVShow, TVShowGridItem, MusicItem>(datasource, external)
+: ItemViewModel<TVShow, TVShowGridItem, MovieItem>(datasource, external)
 {
     public override TVShowGridItem Convert(int index, TVShow i)
     {
