@@ -11,8 +11,7 @@ namespace Repositories;
 
 internal class TsvDatasource : IDatasource
 {
-    private readonly CsvConfiguration _config =
-        new(CultureInfo.InvariantCulture) { Delimiter = "\t" };
+    private readonly CsvConfiguration _config = new(CultureInfo.InvariantCulture);
 
     public void Add<T>(T item)
         where T : IItem
@@ -102,54 +101,6 @@ internal class TsvDatasource : IDatasource
         where T : IItem
     {
         var events = string.Empty;
-
-        // var items = GetList<Game>();
-
-        // foreach (var i in items)
-        // {
-        //     var oldPath = Path.Combine(Paths.Images, typeof(Game).ToString(), $"{i.Igdb}.png");
-        //     ;
-        //     var newPath = Path.Combine(Paths.Images, "Game_fixed", $"{i.ID}.png");
-        //     ;
-
-        //     if (!File.Exists(oldPath))
-        //     {
-        //         continue;
-        //     }
-
-        //     File.Move(oldPath, newPath);
-        // }
-
-        // var bookmarkedItemIDs = new List<int> { 8064, 11221, 16368, 16413, 17480, 17485, 17486 };
-
-        // foreach (var e in events)
-        // {
-        //     if (bookmarkedItemIDs.Contains(e.ItemID))
-        //     {
-        //         e.Bookmakred = true;
-        //     }
-        //     else
-        //     {
-        //         e.Bookmakred = false;
-        //     }
-        // }
-
-        // foreach (var i in GetList<Work>())
-        // {
-        //     var lastEvent = events.Where(o => o.ItemID == i.ID).MaxBy(o => o.DateEnd.Value);
-
-        //     if (!bookmarkedItemIDs.Contains(i.ID))
-        //     {
-        //         lastEvent.Bookmakred = false;
-        //     }
-        // }
-
-        // var config = new CsvConfiguration(CultureInfo.InvariantCulture)
-        // {
-        //     HasHeaderRecord = false,
-        //     Delimiter = "\t"
-        // };
-
         var itemFilePath = GetEventFilePath<T>();
         using var writer = new StreamWriter(itemFilePath, false, System.Text.Encoding.UTF8);
         using var csvText = new CsvWriter(writer, _config);
