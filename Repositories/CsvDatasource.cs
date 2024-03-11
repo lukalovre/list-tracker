@@ -11,7 +11,12 @@ namespace Repositories;
 
 internal class CsvDatasource : IDatasource
 {
-    private readonly CsvConfiguration _config = new(CultureInfo.InvariantCulture);
+    private readonly CsvConfiguration _config = new(CultureInfo.InvariantCulture)
+    {
+        HasHeaderRecord = true,
+        HeaderValidated = null,
+        MissingFieldFound = null
+    };
 
     public void Add<T>(T item)
         where T : IItem
@@ -79,16 +84,7 @@ internal class CsvDatasource : IDatasource
 
         var reader = new StringReader(text);
 
-        // Use _config once all old tsvs are converted
-        var config = new CsvConfiguration(CultureInfo.InvariantCulture)
-        {
-            Delimiter = "\t",
-            HasHeaderRecord = false,
-            MissingFieldFound = null,
-            BadDataFound = null
-        };
-
-        using var csv = new CsvReader(reader, config);
+        using var csv = new CsvReader(reader, _config);
         return csv.GetRecords<T>().ToList();
     }
 

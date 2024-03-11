@@ -17,6 +17,6 @@ public partial class GamesViewModel(IDatasource datasource, IExternal<Game> exte
 
     public override GameGridItem Convert(int index, Game i)
     {
-        return new GameGridItem(i.ID, index + 1, i.Title, i.Year);
+        return new GameGridItem(i.ID, index + 1, i.game, i.release_date);
     }
 }

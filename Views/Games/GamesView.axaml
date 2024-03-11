@@ -17,8 +17,8 @@
             <TabItem Header="Info">
                 <ScrollViewer>
                     <StackPanel>
-                        <TextBox Watermark="Title" Text="{Binding SelectedItem.Title}" HorizontalAlignment="Stretch" />
-                        <TextBox Watermark="Year" Text="{Binding SelectedItem.Year}" HorizontalAlignment="Stretch" />
+                        <TextBox Watermark="Title" Text="{Binding SelectedItem.game}" HorizontalAlignment="Stretch" />
+                        <TextBox Watermark="Year" Text="{Binding SelectedItem.game}" HorizontalAlignment="Stretch" />
                         <Image Source="{Binding Image}" Width="300"/>
                     </StackPanel>
                 </ScrollViewer>
