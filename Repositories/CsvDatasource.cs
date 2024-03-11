@@ -48,13 +48,13 @@ internal class CsvDatasource : IDatasource
     private static string GetFilePath<T>()
     {
         var tableName = GetDataName<T>();
-        return Path.Combine(Paths.Data, $"{tableName}.tsv");
+        return Path.Combine(Paths.Data, $"{tableName}.csv");
     }
 
     private static string GetEventFilePath<T>()
     {
         var tableName = GetDataName<T>();
-        return Path.Combine(Paths.EventDataPath, $"{tableName}.tsv");
+        return Path.Combine(Paths.EventDataPath, $"{tableName}.csv");
     }
 
     private static string? GetDataName<T>()
