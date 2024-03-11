@@ -9,7 +9,7 @@ using CsvHelper.Configuration;
 
 namespace Repositories;
 
-internal class TsvDatasource : IDatasource
+internal class CsvDatasource : IDatasource
 {
     private readonly CsvConfiguration _config = new(CultureInfo.InvariantCulture);
 
