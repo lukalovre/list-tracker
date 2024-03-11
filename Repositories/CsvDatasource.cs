@@ -59,7 +59,7 @@ internal class CsvDatasource : IDatasource
     private static string GetEventFilePath<T>()
     {
         var tableName = GetDataName<T>();
-        return Path.Combine(Paths.EventDataPath, $"{tableName}.csv");
+        return Path.Combine(Paths.EventDataPath, $"{tableName}.tsv");
     }
 
     private static string? GetDataName<T>()
