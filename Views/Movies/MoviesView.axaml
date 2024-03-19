@@ -9,7 +9,6 @@
                             <DataGridTextColumn Binding="{Binding Title}" Header="Title" Width="*" />
                             <DataGridTextColumn Binding="{Binding Director}" Header="Director" Width="70" />
                             <DataGridTextColumn Binding="{Binding Year}" Header="Year" Width="70" />
-                            <DataGridTextColumn Binding="{Binding Rating}" Header="Rating" Width="120" />
                         </DataGrid.Columns>
                     </DataGrid>
                 </DockPanel>
@@ -19,49 +18,15 @@
             <TabItem Header="Info">
                 <ScrollViewer>
                     <StackPanel>
-                        <TextBox Text="{Binding SelectedItem.Owner}" />
                         <TextBox Text="{Binding SelectedItem.Director}" />
                         <TextBox Text="{Binding SelectedItem.Title}" />
                         <TextBox Text="{Binding SelectedItem.Year}" />
-                        <TextBox Text="{Binding SelectedItem.Format}" />
-                        <TextBox Text="{Binding SelectedItem.Region}" />
-                        <TextBox Text="{Binding SelectedItem.Price}" />
-                        <TextBox Text="{Binding SelectedItem.PriceInRSD}" />
                         <TextBox Text="{Binding SelectedItem.Date}" />
-                        <TextBox Text="{Binding SelectedItem.ExternalID}" />
-                        <TextBox Text="{Binding SelectedItem.Comment}" />
                         <Button>
                             <Image Source="{Binding Image}" Width="430" Height="430" />
                         </Button>
                     </StackPanel>
                 </ScrollViewer>
-            </TabItem>
-            <TabItem Header="New">
-                <ScrollViewer>
-                    <StackPanel>
-                        <StackPanel Orientation="Horizontal">
-                            <Button Command="{Binding AddItemClick}" Margin="15">Add</Button>
-                            <TextBox Watermark="Paste url" Text="{Binding InputUrl}" Margin="15" />
-                        </StackPanel>
-                        <TextBox Text="{Binding NewItem.Owner}" />
-                        <TextBox Text="{Binding NewItem.Director}" />
-                        <TextBox Text="{Binding NewItem.Title}" />
-                        <TextBox Text="{Binding NewItem.Year}" />
-                        <TextBox Text="{Binding NewItem.Format}" />
-                        <TextBox Text="{Binding NewItem.Region}" />
-                        <TextBox Text="{Binding NewItem.Price}" />
-                        <TextBox Text="{Binding NewItem.PriceInRSD}" />
-                        <TextBox Text="{Binding NewItem.Date}" />
-                        <TextBox Text="{Binding NewItem.ExternalID}" />
-                        <TextBox Text="{Binding NewItem.Comment}" />
-                        <Button>
-                            <Image Source="{Binding NewImage}" Width="430" Height="430" />
-                        </Button>
-                    </StackPanel>
-                </ScrollViewer>
-            </TabItem>
-            <TabItem Header="Edit">
-                <TextBlock Text="Event" />
             </TabItem>
         </TabControl>
     </DockPanel>

@@ -1,5 +1,4 @@
-﻿using System.Collections.Generic;
-using AvaloniaApplication1.Repositories;
+﻿using AvaloniaApplication1.Repositories;
 using Repositories;
 
 namespace AvaloniaApplication1.ViewModels;

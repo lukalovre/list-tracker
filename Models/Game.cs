@@ -1,7 +1,5 @@
 using System;
-using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using AvaloniaApplication1.Models;
 
 [Table("Games")]
 public class Game : IItem

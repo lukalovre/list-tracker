@@ -12,10 +12,6 @@ public partial class TVShowsViewModel(IDatasource datasource, IExternal<TVShow> 
             i.ID,
             index + 1,
             i.Title,
-            0,
-            0,
-            null,
-            0
-        );
+            0);
     }
 }

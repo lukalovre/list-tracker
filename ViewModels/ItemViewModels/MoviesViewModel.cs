@@ -13,8 +13,6 @@ public partial class MoviesViewModel(IDatasource datasource, IExternal<Movie> ex
             index + 1,
             i.Title,
             i.Director,
-            i.Year ?? 0,
-            0
-        );
+            i.Year ?? 0);
     }
 }
