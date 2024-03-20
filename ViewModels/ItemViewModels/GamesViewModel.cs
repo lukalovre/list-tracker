@@ -6,6 +6,8 @@ public partial class GamesViewModel(IDatasource datasource) : ItemViewModel<Game
 {
     public override GameGridItem Convert(int index, Game i)
     {
-        return new GameGridItem(i.ID, index + 1, i.game, i.release_date);
+        var year = HtmlHelper.GetYear(i.release_date);
+
+        return new GameGridItem(i.ID, index + 1, i.game, year);
     }
 }
