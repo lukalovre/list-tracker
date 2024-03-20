@@ -13,17 +13,5 @@
                 </DockPanel>
             </TabItem>
         </TabControl>
-        <TabControl Margin="5">
-            <TabItem Header="Info">
-                <ScrollViewer>
-                    <StackPanel>
-                        <TextBlock Text="{Binding SelectedItem.Title}" FontSize="20" FontWeight="Bold" />
-                        <Button>
-                            <Image Source="{Binding Image}" Width="430" Height="430" />
-                        </Button>
-                    </StackPanel>
-                </ScrollViewer>
-            </TabItem>
-        </TabControl>
     </DockPanel>
 </UserControl>

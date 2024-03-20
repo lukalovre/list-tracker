@@ -3,18 +3,18 @@
         <TabControl>
             <TabItem Header="★">
                 <DockPanel>
-                    <DataGrid Margin="1" Width="570" ItemsSource="{Binding GridItemsBookmarked}" IsReadOnly="True" GridLinesVisibility="All" BorderThickness="2" BorderBrush="MediumPurple" SelectedItem="{Binding SelectedGridItem}">
+                    <DataGrid Margin="1" Width="1100" ItemsSource="{Binding GridItemsBookmarked}" IsReadOnly="True" GridLinesVisibility="All" BorderThickness="2" BorderBrush="MediumPurple" SelectedItem="{Binding SelectedGridItem}">
                         <DataGrid.Columns>
-                            <DataGridTextColumn Binding="{Binding Index}" Header="{Binding GridCountItems}" Width="45" />
+                            <DataGridTextColumn Binding="{Binding Index}" Header="{Binding GridCountItemsBookmarked}" Width="45" />
                             <DataGridTextColumn Binding="{Binding Title}" Header="Title" Width="*" />
                             <DataGridTextColumn Binding="{Binding Year}" Header="Year" Width="70" />
                         </DataGrid.Columns>
                     </DataGrid>
                 </DockPanel>
             </TabItem>
-            <TabItem Header="1001">
+            <TabItem Header="All">
                 <DockPanel>
-                    <DataGrid Margin="1" Width="570" ItemsSource="{Binding GridItems}" IsReadOnly="True" GridLinesVisibility="All" BorderThickness="2" BorderBrush="MediumPurple" SelectedItem="{Binding SelectedGridItem}">
+                    <DataGrid Margin="1" Width="1100" ItemsSource="{Binding GridItems}" IsReadOnly="True" GridLinesVisibility="All" BorderThickness="2" BorderBrush="MediumPurple" SelectedItem="{Binding SelectedGridItem}">
                         <DataGrid.Columns>
                             <DataGridTextColumn Binding="{Binding Index}" Header="{Binding GridCountItems}" Width="45" />
                             <DataGridTextColumn Binding="{Binding Title}" Header="Title" Width="*" />
@@ -22,17 +22,6 @@
                         </DataGrid.Columns>
                     </DataGrid>
                 </DockPanel>
-            </TabItem>
-        </TabControl>
-        <TabControl Margin="5">
-            <TabItem Header="Info">
-                <ScrollViewer>
-                    <StackPanel>
-                        <TextBox Watermark="Title" Text="{Binding SelectedItem.game}" HorizontalAlignment="Stretch" />
-                        <TextBox Watermark="Year" Text="{Binding SelectedItem.game}" HorizontalAlignment="Stretch" />
-                        <Image Source="{Binding Image}" Width="300"/>
-                    </StackPanel>
-                </ScrollViewer>
             </TabItem>
         </TabControl>
     </DockPanel>

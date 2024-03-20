@@ -1,10 +1,8 @@
-using AvaloniaApplication1.Repositories;
 using Repositories;
 
 namespace AvaloniaApplication1.ViewModels;
 
-public partial class MoviesViewModel(IDatasource datasource, IExternal<Movie> external)
-: ItemViewModel<Movie, MovieGridItem, MovieItem>(datasource, external)
+public partial class MoviesViewModel(IDatasource datasource) : ItemViewModel<Movie, MovieGridItem, MovieItem>(datasource)
 {
     public override MovieGridItem Convert(int index, Movie i)
     {
