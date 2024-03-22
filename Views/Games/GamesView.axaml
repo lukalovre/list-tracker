@@ -8,6 +8,8 @@
                             <DataGridTextColumn Binding="{Binding Index}" Header="{Binding GridCountItemsBookmarked}" Width="45" />
                             <DataGridTextColumn Binding="{Binding Title}" Header="Title" Width="*" />
                             <DataGridTextColumn Binding="{Binding Year}" Header="Year" Width="70" />
+                            <DataGridTextColumn Binding="{Binding Developer}" Header="Developer" Width="250" />
+                            <DataGridTextColumn Binding="{Binding Platform}" Header="Platform" Width="250" />
                         </DataGrid.Columns>
                     </DataGrid>
                 </DockPanel>
@@ -19,6 +21,8 @@
                             <DataGridTextColumn Binding="{Binding Index}" Header="{Binding GridCountItems}" Width="45" />
                             <DataGridTextColumn Binding="{Binding Title}" Header="Title" Width="*" />
                             <DataGridTextColumn Binding="{Binding Year}" Header="Year" Width="70" />
+                            <DataGridTextColumn Binding="{Binding Developer}" Header="Developer" Width="250" />
+                            <DataGridTextColumn Binding="{Binding Platform}" Header="Platform" Width="250" />
                         </DataGrid.Columns>
                     </DataGrid>
                 </DockPanel>
