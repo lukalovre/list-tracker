@@ -120,7 +120,6 @@ internal class CsvDatasource : IDatasource
         var config = new CsvConfiguration(CultureInfo.InvariantCulture)
         {
             Delimiter = "\t",
-            HasHeaderRecord = false,
             MissingFieldFound = null,
             BadDataFound = null
         };
