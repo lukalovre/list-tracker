@@ -10,8 +10,8 @@ public class TVShow : IItem
     public string Imdb { get; set; }
     public string Title { get; set; }
     public string OriginalTitle { get; set; }
-    public int Year { get; set; }
-    public int Runtime { get; set; }
+    public int? Year { get; set; }
+    public int? Runtime { get; set; }
     public string Actors { get; set; }
     public string Country { get; set; }
     public string Genre { get; set; }
@@ -19,12 +19,12 @@ public class TVShow : IItem
     public string Language { get; set; }
 
     public string Plot { get; set; }
-
+    public int? NumVotes { get; set; }
     public string Type { get; set; }
 
     public string Director { get; set; }
 
     public string Writer { get; set; }
-    public string ExternalID { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-    public DateTime? Date { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+    public string ExternalID { get; set; }
+    public DateTime? Date { get; set; }
 }

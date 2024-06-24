@@ -10,6 +10,9 @@ public partial class TVShowsViewModel(IDatasource datasource) : ItemViewModel<TV
             i.ID,
             index + 1,
             i.Title,
-            0);
+            i.Director,
+            i.Year ?? 0,
+            i.Runtime ?? 0,
+            i.NumVotes ?? 0);
     }
 }
