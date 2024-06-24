@@ -11,11 +11,11 @@
                     <TabItem Header="Games">
                         <v:GamesView DataContext="{Binding GamesViewModel}" />
                     </TabItem>
-                    <TabItem Header="TV Shows">
-                        <v:TVShowsView DataContext="{Binding TVShowsViewModel}" />
-                    </TabItem>
                     <TabItem Header="Movies">
                         <v:MoviesView DataContext="{Binding MoviesViewModel}" />
+                    </TabItem>
+                    <TabItem Header="TV Shows">
+                        <v:TVShowsView DataContext="{Binding TVShowsViewModel}" />
                     </TabItem>
                 </TabControl>
             </TabItem>
