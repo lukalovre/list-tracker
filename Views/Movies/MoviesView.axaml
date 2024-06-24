@@ -9,6 +9,8 @@
                             <DataGridTextColumn Binding="{Binding Title}" Header="Title" Width="*" />
                             <DataGridTextColumn Binding="{Binding Director}" Header="Director" Width="70" />
                             <DataGridTextColumn Binding="{Binding Year}" Header="Year" Width="70" />
+                            <DataGridTextColumn Binding="{Binding Runtime}" Header="Runtime" Width="70" />
+                            <DataGridTextColumn Binding="{Binding NumVotes}" Header="Votes" Width="70" />
                         </DataGrid.Columns>
                     </DataGrid>
                 </DockPanel>

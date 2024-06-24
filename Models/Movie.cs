@@ -10,6 +10,8 @@ public class Movie : IItem
     public string Director { get; set; }
     public string Title { get; set; }
     public int? Year { get; set; }
+    public int? NumVotes { get; set; }
+    public int? Runtime { get; set; }
     public string ExternalID { get; set; }
     public DateTime? Date { get; set; }
 }

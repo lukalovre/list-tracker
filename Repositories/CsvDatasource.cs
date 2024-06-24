@@ -17,38 +17,6 @@ internal class CsvDatasource : IDatasource
         MissingFieldFound = null
     };
 
-    public void Add<T>(T item)
-        where T : IItem
-    {
-        var items = GetList<T>();
-
-        if (!items.Any(o => o.ID == item.ID))
-        {
-            var maxItemID = items.MaxBy(o => o.ID)?.ID ?? 0;
-            item.ID = maxItemID + 1;
-
-            var itemFilePath = GetFilePath<T>();
-
-            using var writerItem = new StreamWriter(itemFilePath, true);
-            using var csvItem = new CsvWriter(writerItem, _config);
-
-            // if (item.ID == 1)
-            // {
-            //     // Start of file, write header first
-            //     csvItem.WriteHeader<T>();
-            // }
-
-            csvItem.NextRecord();
-            csvItem.WriteRecord(item);
-            FileRepsitory.MoveTempImage<T>(item.ID);
-        }
-
-        if (!FileRepsitory.ImageExists<T>(item.ID))
-        {
-            FileRepsitory.MoveTempImage<T>(item.ID);
-        }
-    }
-
     private static string GetFilePath<T>()
     {
         var tableName = GetDataName<T>();
@@ -69,8 +37,7 @@ internal class CsvDatasource : IDatasource
         return tableName;
     }
 
-    public List<T> GetList<T>()
-        where T : IItem
+    public List<T> GetList<T>() where T : IItem
     {
         var itemFilePath = GetFilePath<T>();
 

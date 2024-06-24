@@ -11,6 +11,8 @@ public partial class MoviesViewModel(IDatasource datasource) : ItemViewModel<Mov
             index + 1,
             i.Title,
             i.Director,
-            i.Year ?? 0);
+            i.Year ?? 0,
+            i.Runtime ?? 0,
+            i.NumVotes ?? 0);
     }
 }
