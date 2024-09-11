@@ -4,6 +4,7 @@ using Avalonia.Controls.ApplicationLifetimes;
 using Avalonia.Markup.Xaml;
 using AvaloniaApplication1.ViewModels;
 using AvaloniaApplication1.Views;
+using Repositories;
 
 namespace AvaloniaApplication1;
 
@@ -20,7 +21,7 @@ public partial class App : Application
         {
             desktop.MainWindow = new MainWindow
             {
-                DataContext = new MainWindowViewModel(),
+                DataContext = new MainWindowViewModel(new CsvDatasource()),
                 Position = new PixelPoint(0, 1000),
                 WindowState = WindowState.Maximized
             };

@@ -1,0 +1,20 @@
+<UserControl xmlns="https://github.com/avaloniaui" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:vm="using:AvaloniaApplication1.ViewModels" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:uc="clr-namespace:AvaloniaApplication1.Views;assembly=AvaloniaApplication1" mc:Ignorable="d" x:DataType="vm:StatsViewModel" x:Class="AvaloniaApplication1.Views.StatsView" xmlns:view="using:AvaloniaApplication1.Views">
+    <DockPanel>
+        <TabControl>
+            <TabItem Header="All">
+                <DockPanel>
+                    <DataGrid Margin="1" Width="1100" ItemsSource="{Binding GridItemsBookmarked}" IsReadOnly="True" GridLinesVisibility="All" BorderThickness="2" BorderBrush="MediumPurple" SelectedItem="{Binding SelectedGridItem}">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Binding="{Binding Index}" Header="{Binding GridCountItemsBookmarked}" Width="60" />
+                            <DataGridTextColumn Binding="{Binding Title}" Header="Title" Width="*" />
+                            <DataGridTextColumn Binding="{Binding Director}" Header="Director" Width="200" />
+                            <DataGridTextColumn Binding="{Binding Year}" Header="Year" Width="70" />
+                            <DataGridTextColumn Binding="{Binding Runtime}" Header="Runtime" Width="70" />
+                            <DataGridTextColumn Binding="{Binding NumVotes}" Header="Votes" Width="100" />
+                        </DataGrid.Columns>
+                    </DataGrid>
+                </DockPanel>
+            </TabItem>
+        </TabControl>
+    </DockPanel>
+</UserControl>
