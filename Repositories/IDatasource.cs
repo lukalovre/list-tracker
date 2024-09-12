@@ -5,6 +5,7 @@ namespace Repositories;
 public interface IDatasource
 {
     List<T> GetList<T>() where T : IItem;
+    List<T> GetList<T>(string path) where T : IItem;
 
     List<T> GetDoneList<T>() where T : IExternalItem;
 

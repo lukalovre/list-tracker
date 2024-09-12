@@ -54,6 +54,23 @@ internal class CsvDatasource : IDatasource
         return csv.GetRecords<T>().ToList();
     }
 
+    public List<T> GetList<T>(string path) where T : IItem
+    {
+        var itemFilePath = path;
+
+        if (!File.Exists(itemFilePath))
+        {
+            return [];
+        }
+
+        var text = File.ReadAllText(itemFilePath);
+
+        var reader = new StringReader(text);
+
+        using var csv = new CsvReader(reader, _config);
+        return csv.GetRecords<T>().ToList();
+    }
+
     public void MakeBackup(string path)
     {
         throw new System.NotImplementedException();
