@@ -16,7 +16,7 @@ public partial class GamesViewModel(IDatasource datasource) : ItemViewModel<Game
         var platforms = GetList(i.platforms);
 
         return new GameGridItem(
-            i.ID,
+            i.ExternalID,
             index + 1,
             i.game,
             year,

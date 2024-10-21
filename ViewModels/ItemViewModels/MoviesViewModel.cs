@@ -7,7 +7,7 @@ public partial class MoviesViewModel(IDatasource datasource) : ItemViewModel<Mov
     public override MovieGridItem Convert(int index, Movie i)
     {
         return new MovieGridItem(
-            i.ID,
+            i.ExternalID,
             index + 1,
             i.Title,
             i.Director,

@@ -1,5 +1,6 @@
 using System;
 using System.ComponentModel.DataAnnotations.Schema;
+using CsvHelper.Configuration.Attributes;
 
 [Table("Games")]
 public class Game : IItem
@@ -15,7 +16,10 @@ public class Game : IItem
     public string release_date { get; set; }
     public string themes { get; set; }
     public string url { get; set; }
-    public int ID { get; set; }
+
+    [Name("url")]
+    public string URL { get; set; }
+    public string ID { get; set; }
     public string ExternalID { get; set; }
     public DateTime? Date { get; set; }
 }

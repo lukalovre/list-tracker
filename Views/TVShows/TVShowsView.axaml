@@ -3,7 +3,7 @@
         <TabControl>
             <TabItem Header="All">
                 <DockPanel>
-                    <DataGrid Margin="1" Width="1100" ItemsSource="{Binding GridItemsBookmarked}" IsReadOnly="True" GridLinesVisibility="All" BorderThickness="2" BorderBrush="MediumPurple" SelectedItem="{Binding SelectedGridItem}">
+                    <DataGrid Margin="1" Width="1000" ItemsSource="{Binding GridItemsBookmarked}" IsReadOnly="True" GridLinesVisibility="All" BorderThickness="2" BorderBrush="MediumPurple" SelectedItem="{Binding SelectedGridItem}">
                         <DataGrid.Columns>
                             <DataGridTextColumn Binding="{Binding Index}" Header="{Binding GridCountItemsBookmarked}" Width="45" />
                             <DataGridTextColumn Binding="{Binding Title}" Header="Title" Width="*" />
@@ -13,6 +13,7 @@
                             <DataGridTextColumn Binding="{Binding NumVotes}" Header="Votes" Width="100" />
                         </DataGrid.Columns>
                     </DataGrid>
+                    <Button Command="{Binding OpenLink}" Margin="2">Open Link</Button>
                 </DockPanel>
             </TabItem>
         </TabControl>

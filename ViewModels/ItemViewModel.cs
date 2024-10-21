@@ -1,4 +1,3 @@
-using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
@@ -16,7 +15,6 @@ where TItem : IItem
 where TGridItem : IGridItem
 where TEventItem : IExternalItem
 {
-    public virtual float AmountToMinutesModifier => 1f;
     private readonly IDatasource _datasource;
     private TGridItem _selectedGridItem;
     private List<TItem> _itemList;
@@ -70,18 +68,11 @@ where TEventItem : IExternalItem
 
         Search = ReactiveCommand.Create(SearchAction);
         OpenLink = ReactiveCommand.Create(OpenLinkAction);
-
-        SelectedGridItem = GridItems.LastOrDefault();
-    }
-
-    public virtual List<string> OpenLinkAlternativeParameters()
-    {
-        return [];
     }
 
     private void OpenLinkAction()
     {
-        HtmlHelper.OpenLink(SelectedItem.ExternalID, OpenLinkAlternativeParameters());
+        HtmlHelper.OpenLink(SelectedItem.URL);
     }
 
     private void SearchAction()
@@ -94,8 +85,6 @@ where TEventItem : IExternalItem
             GridItemsBookmarked.AddRange(LoadData());
             return;
         }
-
-        // var searchMovie = new Movie { Director = SearchText, Title = SearchText };
 
         GridItemsBookmarked.Clear();
         GridItemsBookmarked.AddRange(LoadDataBookmarked());
@@ -146,6 +135,6 @@ where TEventItem : IExternalItem
             return;
         }
 
-        SelectedItem = _itemList.First(o => o.ID == SelectedGridItem.ID);
+        SelectedItem = _itemList.First(o => o.ExternalID == SelectedGridItem.ID);
     }
 }

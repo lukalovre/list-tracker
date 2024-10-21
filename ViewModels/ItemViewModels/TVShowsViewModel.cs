@@ -7,7 +7,7 @@ public partial class TVShowsViewModel(IDatasource datasource) : ItemViewModel<TV
     public override TVShowGridItem Convert(int index, TVShow i)
     {
         return new TVShowGridItem(
-            i.ID,
+            i.ExternalID,
             index + 1,
             i.Title,
             i.Director,
