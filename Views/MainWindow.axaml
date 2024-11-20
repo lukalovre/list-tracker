@@ -8,11 +8,11 @@
         <TabControl Margin="5">
             <TabItem Header="Main">
                 <TabControl TabStripPlacement="Left">
-                    <TabItem Header="Games">
-                        <v:GamesView DataContext="{Binding GamesViewModel}" />
-                    </TabItem>
                     <TabItem Header="Movies">
                         <v:MoviesView DataContext="{Binding MoviesViewModel}" />
+                    </TabItem>
+                    <TabItem Header="Games">
+                        <v:GamesView DataContext="{Binding GamesViewModel}" />
                     </TabItem>
                     <TabItem Header="TV Shows">
                         <v:TVShowsView DataContext="{Binding TVShowsViewModel}" />
