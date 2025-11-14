@@ -6,9 +6,9 @@
 // using System.Net.Http.Json;
 // using System.Threading.Tasks;
 // using Repositories;
-// using AvaloniaApplication1.ViewModels.Extensions;
+// using ListTracker.ViewModels.Extensions;
 
-// namespace AvaloniaApplication1.Repositories.External;
+// namespace ListTracker.Repositories.External;
 
 // public class Imdb
 // {

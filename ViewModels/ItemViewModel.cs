@@ -3,12 +3,12 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using System.Reactive;
 using System.Reactive.Linq;
-using AvaloniaApplication1.Models;
+using ListTracker.Models;
 using DynamicData;
 using ReactiveUI;
 using Repositories;
 
-namespace AvaloniaApplication1.ViewModels;
+namespace ListTracker.ViewModels;
 
 public class ItemViewModel<TItem, TGridItem, TEventItem> : ViewModelBase
 where TItem : IItem

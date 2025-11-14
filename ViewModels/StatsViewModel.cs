@@ -8,7 +8,7 @@ using System.Linq;
 using Controller;
 using System.Drawing;
 
-namespace AvaloniaApplication1.ViewModels;
+namespace ListTracker.ViewModels;
 
 public partial class StatsViewModel : ViewModelBase
 {

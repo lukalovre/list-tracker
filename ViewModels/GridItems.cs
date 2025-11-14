@@ -1,4 +1,4 @@
-using AvaloniaApplication1.Models;
+using ListTracker.Models;
 
 public record MovieGridItem(string ID, int Index, string Title, string Director, int Year, int Runtime, int NumVotes) : IGridItem;
 

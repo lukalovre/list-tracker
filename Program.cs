@@ -2,7 +2,7 @@
 using Avalonia.ReactiveUI;
 using System;
 
-namespace AvaloniaApplication1;
+namespace ListTracker;
 
 internal sealed class Program
 {

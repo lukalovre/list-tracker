@@ -1,6 +1,6 @@
 using System;
 
-namespace AvaloniaApplication1.ViewModels.Extensions;
+namespace ListTracker.ViewModels.Extensions;
 
 public static class StringExtensions
 {

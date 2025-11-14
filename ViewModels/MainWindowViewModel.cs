@@ -1,6 +1,6 @@
 ﻿using Repositories;
 
-namespace AvaloniaApplication1.ViewModels;
+namespace ListTracker.ViewModels;
 
 public class MainWindowViewModel(IDatasource datasource) : ViewModelBase
 {

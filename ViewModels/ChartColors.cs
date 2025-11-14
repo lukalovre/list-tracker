@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Drawing;
 
-namespace AvaloniaApplication1.ViewModels;
+namespace ListTracker.ViewModels;
 
 public class ChartColors
 {

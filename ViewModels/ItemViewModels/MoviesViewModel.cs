@@ -1,6 +1,6 @@
 using Repositories;
 
-namespace AvaloniaApplication1.ViewModels;
+namespace ListTracker.ViewModels;
 
 public partial class MoviesViewModel(IDatasource datasource) : ItemViewModel<Movie, MovieGridItem, MovieItem>(datasource)
 {
