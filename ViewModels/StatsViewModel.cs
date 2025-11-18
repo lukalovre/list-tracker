@@ -7,6 +7,7 @@ using SkiaSharp;
 using System.Linq;
 using Controller;
 using System.Drawing;
+using System.Collections.ObjectModel;
 
 namespace ListTracker.ViewModels;
 
@@ -87,7 +88,7 @@ public partial class StatsViewModel : ViewModelBase
         _1001.Add(
             new ColumnSeries<int>
             {
-                Values = values.Select(o => o.Value),
+                Values = new ReadOnlyCollection<int>(values.Select(o => o.Value).ToList()),
                 Fill = new SolidColorPaint(new SKColor(color.R, color.G, color.B))
             });
     }
