@@ -2,7 +2,8 @@ using Repositories;
 
 namespace ListTracker.ViewModels;
 
-public partial class TVShowsViewModel(IDatasource datasource) : ItemViewModel<TVShow, TVShowGridItem, MovieItem>(datasource)
+public partial class TVShowsViewModel(IDatasource datasource) 
+: ItemViewModel<TVShow, TVShowGridItem, TVShowItem>(datasource)
 {
     public override TVShowGridItem Convert(int index, TVShow i)
     {

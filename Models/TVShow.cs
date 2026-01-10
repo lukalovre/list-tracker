@@ -25,7 +25,7 @@ public class TVShow : IItem
     public string Director { get; set; }
 
     public string Writer { get; set; }
-    public string ExternalID { get; set; }
+    public string ExternalID { get; set; } = null!;
     public DateTime? Date { get; set; }
     public string URL { get; set; }
 }
